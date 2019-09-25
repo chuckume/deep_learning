@@ -1,0 +1,35 @@
+# SETUP UBUNTU
+
+sudo apt update --yes
+sudo apt upgrade --yes
+
+# Get Miniconda and make it the main Python interpreter
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
+bash ~/miniconda.sh -b -p ~/miniconda 
+rm ~/miniconda.sh
+
+# INSTALL GIT
+
+sudo apt install git
+
+# INSTALL TMUX (FOR RUNNING ON SERVER)
+
+sudo apt-get install tmux
+
+
+# INSTALL FASTAI
+
+sudo apt-get install gcc
+
+
+sudo apt-get install python3-dev
+
+pip install --no-deps fastai
+
+pip install $(python setup.py -q deps --dep-groups=core,vision) --no-cache-dir
+
+
+# COPY THE MODEL ON THE SERVER 
+
+scp...
+
