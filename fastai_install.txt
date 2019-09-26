@@ -28,8 +28,11 @@ pip install --no-deps fastai
 
 pip install $(python setup.py -q deps --dep-groups=core,vision) --no-cache-dir
 
-
+pip install --no-deps fastai --no-cache-dir
 # COPY THE MODEL ON THE SERVER 
 
-scp...
+Must be in the folder containing export.pkl
+pscp -pw your_password "export.pkl" username@ip:destination_folder
+
+
 
